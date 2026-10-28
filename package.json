@@ -1,0 +1,42 @@
+{
+  "name": "dsh-qq-meme",
+  "version": "0.1.0",
+  "description": "Make DeepSeek Harness agents actually send stickers in QQ: bridges dsh-meme's library to the official @tencent-connect/dsh-qqbot, exposing one safe qq_meme tool (the model describes the emotion, the plugin picks the file).",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "deepseek",
+    "harness",
+    "dsh",
+    "dsh-plugin",
+    "qq",
+    "qqbot",
+    "meme",
+    "sticker",
+    "表情包"
+  ],
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WYR-233/dsh-qq-meme.git"
+  },
+  "homepage": "https://github.com/WYR-233/dsh-qq-meme"
+}
