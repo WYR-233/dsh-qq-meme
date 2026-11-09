@@ -14,9 +14,33 @@
 
 ## 装
 
+### 方式一：图形界面（推荐）
+
+侧栏「插件」→「添加插件」，输入框里**只填包名或地址**：
+
+```
+WYR-233/dsh-qq-meme
+```
+
+认不出来的话换完整地址：
+
+```
+https://github.com/WYR-233/dsh-qq-meme
+```
+
+### 方式二：终端
+
 ```bash
 dsh plugin --profile web add github:WYR-233/dsh-qq-meme
 ```
+
+国内网络拉不动 GitHub 的话，可以走镜像：
+
+```bash
+dsh plugin --profile web add https://ghfast.top/https://github.com/WYR-233/dsh-qq-meme
+```
+
+> ⚠️ **别把上面这条命令粘进「添加插件」的输入框**——那个框要的是包名/地址，不是完整命令，粘进去会报 `not a package name the registry accepts`。（2026-11-10 有用户踩过，见 issue #1。）
 
 装完把包名加进 profile 的 `dsh.profile.bundles`，重启 DSH。
 
